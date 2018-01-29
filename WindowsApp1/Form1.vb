@@ -27,8 +27,15 @@
         first(up + 1) = txtFirst.Text
         txtFirst.Clear()
         txtFirst.Focus()
-        lblFirst.Text = first.Length & " numbers"
-        lblTotal.Text = first.Length + sec.Length + third.Length & " Total numbers"
+        If first.Length <= 1 Then
+            lblFirst.Text = first.Length & " number"
+            lblTotal.Text = first.Length + sec.Length + third.Length & " Total number"
+
+        Else
+            lblFirst.Text = first.Length & " numbers"
+            lblTotal.Text = first.Length + sec.Length + third.Length & " Total numbers"
+        End If
+
 
     End Sub
 
@@ -38,8 +45,16 @@
         sec(up + 1) = txtSec.Text
         txtSec.Clear()
         txtSec.Focus()
-        lblSec.Text = sec.Length & " numbers"
-        lblTotal.Text = first.Length + sec.Length + third.Length & " Total numbers"
+        If sec.Length <= 1 Then
+            lblSec.Text = sec.Length & " number"
+            lblTotal.Text = first.Length + sec.Length + third.Length & " Total number"
+
+        Else
+            lblSec.Text = sec.Length & " numbers"
+            lblTotal.Text = first.Length + sec.Length + third.Length & " Total numbers"
+
+        End If
+
     End Sub
 
     Private Sub btnThird_Click(sender As Object, e As EventArgs) Handles btnThird.Click
@@ -48,7 +63,17 @@
         third(up + 1) = txtThird.Text
         txtThird.Clear()
         txtThird.Focus()
-        lblThird.Text = third.Length & " numbers"
-        lblTotal.Text = first.Length + sec.Length + third.Length & " Total numbers"
+        If third.Length <= 1 Then
+            lblThird.Text = third.Length & " number"
+            lblTotal.Text = first.Length + sec.Length + third.Length & " Total number"
+
+        Else
+
+            lblThird.Text = third.Length & " numbers"
+
+            lblTotal.Text = first.Length + sec.Length + third.Length & " Total numbers"
+
+        End If
+
     End Sub
 End Class
